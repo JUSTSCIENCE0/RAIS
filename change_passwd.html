@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Смена пароля</title>
+  <link rel="shortcut icon" href="data/logo.jfif" type="image/x-icon">
+</head>
+
+<body>
+<div class="bgimg img-mountains">
+    <div class="container">
+
+		<label for="new-psw"><b>Новый пароль</b></label>
+		<input type="password" class="use-margin"  placeholder="Введите пароль" id="new-psw" name="new-psw" required>
+		
+		<label for="repeat-psw"><b>Повторите пароль</b></label>
+		<input type="password" class="use-margin"  placeholder="Введите пароль" name="repeat-psw" required>
+		
+		<button type="submit" class="btn login">Сменить</button>
+		
+		<div id="message">
+		<h3>Пароль должен содержать:</h3>
+		<p id="letter" class="invalid"><b>Прописные</b> кириллические или латинские буквы</p>
+		<p id="capital" class="invalid"><b>Заглавные</b> кириллические или латинские буквы</p>
+		<p id="number" class="invalid"><b>Цифры</b></p>
+		<p id="length" class="invalid"><b>Минимум 8 символов</b></p>
+		</form>
+    </div>
+</div>
+
+<script>
+var myInput = document.getElementById("new-psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// When the user clicks on the password field, show the message box
+myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+}
+
+// When the user clicks outside of the password field, hide the message box
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+}
+
+// When the user starts to type something inside the password field
+myInput.onkeyup = function() {
+  // Validate lowercase letters
+  var lowerCaseEnglish = /[a-z]/g;
+  var lowerCaseRussian = /[а-я]/g;
+  if(myInput.value.match(lowerCaseEnglish) || myInput.value.match(lowerCaseRussian)) {  
+    letter.classList.remove("invalid");
+    letter.classList.add("valid");
+  } else {
+    letter.classList.remove("valid");
+    letter.classList.add("invalid");
+  }
+
+  // Validate capital letters
+  var upperCaseEnglish = /[A-Z]/g;
+  var upperCaseRussian = /[А-Я]/g;
+  if(myInput.value.match(upperCaseEnglish) || myInput.value.match(upperCaseRussian)) {  
+    capital.classList.remove("invalid");
+    capital.classList.add("valid");
+  } else {
+    capital.classList.remove("valid");
+    capital.classList.add("invalid");
+  }
+
+  // Validate numbers
+  var numbers = /[0-9]/g;
+  if(myInput.value.match(numbers)) {  
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+  
+  // Validate length
+  if(myInput.value.length >= 8) {
+    length.classList.remove("invalid");
+    length.classList.add("valid");
+  } else {
+    length.classList.remove("valid");
+    length.classList.add("invalid");
+  }
+}
+</script>
+
+</body>
+</html>
