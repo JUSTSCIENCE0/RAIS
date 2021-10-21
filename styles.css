@@ -26,6 +26,9 @@ body, html {
 .img-mountains {
 	background-image: url('data/mountains.jpg');
 }
+.img-lake {
+	background-image: url('data/lake.jpg');
+}
 
 .topleft {
     position: absolute;
@@ -43,6 +46,19 @@ body, html {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+}
+
+.main_logo {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-position: center;
+    background-size: contain;
+	background-repeat: no-repeat;
+    height: 10%;
+    color: white;
+	background-image: url('data/main_logo.png');
 }
 
 /* Full-width input fields */
@@ -68,6 +84,36 @@ input[type=text]:focus, input[type=password]:focus {
     padding: 16px;
     background-color: white;
 	color: black;
+}
+
+.container_middle_left {
+	position: absolute;
+    left: 0;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: white;
+	color: black;
+	top: 30%;
+    transform: translate(0, -50%);
+	border-radius: 25px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
+}
+
+.container_middle_right {
+	position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: white;
+	color: black;
+	top: 30%;
+    transform: translate(0, -50%);
+	border-radius: 25px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
 }
 
 .descr {
@@ -137,6 +183,13 @@ input[type=text]:focus, input[type=password]:focus {
     position: relative;
     left: -35px;
     content: "✖";
+}
+
+.server_off {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
 }
 
 hr {
