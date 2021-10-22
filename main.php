@@ -11,15 +11,15 @@
 <body>
 <div class="bgimg img-lake">
     <div class="topleft">
-        <p>Сервер:</p>
-		<p>185.130.82.104:55555</p>
+        <b>Сервер:</b><br>
+		<b>185.130.82.104:55555</b>
     </div>
     <div class="main_logo"> </div>
     <div class="container_middle_left">
-	    <p>Статус сервера: </p>
+	    <b>Статус сервера: </b>
 	</div>
 	<div class="container_middle_right">
-	    <p>Список модификаций:</p>
+	    <b>Список модификаций:</b>
 	</div>
 </div>
 </body>
