@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <link rel="stylesheet" type="text/css" href="styles.css">
+<meta http-equiv="Cache-Control" content="no-cache">
 
 <head>
   <meta charset="UTF-8" />
