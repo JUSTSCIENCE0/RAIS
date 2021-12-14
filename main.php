@@ -13,15 +13,18 @@
 <div class="bgimg img-lake">
     <div class="topleft">
         <b>Сервер:</b><br>
-		<b>185.130.82.104:55555</b>
+		<b>109.194.35.237:55555</b>
     </div>
     <div class="main_logo"> </div>
     <div class="container_middle_left">
-	    <b>Статус сервера: </b>
-	</div>
-	<div class="container_middle_right">
-	    <b>Список модификаций:</b>
-	</div>
+        <b>Статус сервера: </b>
+        <form action="php.php">
+            <button type="submit" class="btn login">Запустить</button>
+        </form>
+    </div>
+    <div class="container_middle_right">
+	<b>Список модификаций:</b>
+    </div>
 </div>
 </body>
 </html>
