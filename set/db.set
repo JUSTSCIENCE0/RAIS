@@ -1,0 +1,8 @@
+<?php
+	$sql_host = 'localhost';
+	$sql_dbname = 'mine_db';
+	$sql_login = 'science';
+	$sql_password = 'MinecraftDatabase2021?';
+	$sql_prefix = '';
+	$sql_charset = 'utf8';
+?>
