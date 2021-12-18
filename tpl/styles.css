@@ -18,16 +18,16 @@ body, html {
 }
 
 .img-island {
-	background-image: url('data/island.png');
+	background-image: url('../data/island.png');
 }
 .img-glade {
-	background-image: url('data/glade.jpg');
+	background-image: url('../data/glade.jpg');
 }
 .img-mountains {
-	background-image: url('data/mountains.jpg');
+	background-image: url('../data/mountains.jpg');
 }
 .img-lake {
-	background-image: url('data/lake.jpg');
+	background-image: url('../data/lake.jpg');
 }
 
 .topleft {
@@ -37,8 +37,7 @@ body, html {
 }
 .topright {
     position: absolute;
-    top: 0;
-    right: 0;
+    right: 5px;
 }
 .bottomleft {
     position: absolute;
@@ -63,7 +62,7 @@ body, html {
 	background-repeat: no-repeat;
     height: 10%;
     color: white;
-	background-image: url('data/main_logo.png');
+	background-image: url('../data/main_logo.png');
 }
 
 /* Full-width input fields */
@@ -82,7 +81,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .container {
-	position: absolute;
+    position: absolute;
     right: 0;
     margin: 20px;
     max-width: 400px;
@@ -92,7 +91,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .container_middle_left {
-	position: absolute;
+    position: absolute;
     left: 0;
     margin: 20px;
     max-width: 400px;
@@ -107,7 +106,7 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 .container_middle_right {
-	position: absolute;
+    position: absolute;
     right: 0;
     margin: 20px;
     max-width: 400px;
@@ -116,6 +115,21 @@ input[type=text]:focus, input[type=password]:focus {
 	color: black;
 	top: 30%;
     transform: translate(0, -50%);
+	border-radius: 25px;
+	background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
+}
+
+.container_middle_center {
+    position: absolute;
+    left: 49%;
+    margin: 20px;
+    max-width: 400px;
+    padding: 16px;
+    background-color: white;
+	color: black;
+	top: 30%;
+    transform: translate(-50%, -50%);
 	border-radius: 25px;
 	background-color: rgb(255, 255, 255);
     box-shadow: 0px 0px 10px 10px rgba(255, 255, 255, 1);
@@ -195,6 +209,24 @@ input[type=text]:focus, input[type=password]:focus {
     background-color: #f44336; /* Red */
     color: white;
     margin-bottom: 15px;
+}
+
+
+.topmenu {
+    background-color: #4CAF50;
+    padding: 5px 0px;
+}
+
+.lnkspan {
+    margin: 0px 5px;
+}
+
+a.lnk {
+    text-decoration:none;
+}
+a.lnk:hover {
+    text-decoration:none;
+    text-color:#ff0000;
 }
 
 hr {
