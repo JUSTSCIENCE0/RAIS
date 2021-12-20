@@ -34,7 +34,8 @@ class Encoder
 		$tmp = utf8_encode($msg->Body);
 		$body = unpack("C*", $tmp);
 		
-		$bytes = array_merge($len, $id, $type, $body);
+		$end_word = unpack("C*", "\x00\x00");
+		$bytes = array_merge($len, $id, $type, $body, $end_word);
 
 		return $bytes;
 	}
@@ -85,8 +86,7 @@ class MinecraftClient
 		$enc = new Encoder;
 		$encoded = $enc->EncodeMessage($req);
 		$encoded_str = implode(array_map("chr", $encoded));
-		$res = socket_write($this->fsock, $encoded_str, count($encoded));	
-		echo intval($res);
+		$res = socket_write($this->fsock, $encoded_str, count($encoded));
 	}
 
 	public function Auth($password)
@@ -105,6 +105,8 @@ class MinecraftClient
 
 	public function SendCommand($command)
 	{
+		$this->lastID = $this->lastID + 1;
+
 		$len = strlen($command) + 10;
 		$id = $this->lastID;
 		$type = 2;
@@ -113,8 +115,6 @@ class MinecraftClient
 		$mess->Init($len, $id, $type, $command);
 
 		$this->sendMessage($mess);
-
-		$this->lastID = $this->lastID + 1;
 	}
 }
 

@@ -12,12 +12,8 @@
 		<button type="submit" class="btn login">Войти</button>
 	</form>
 			
-	<form action="registr.html">
+	<form action="registr.php">
 	<button type="submit" class="btn register">Запросить доступ</button>
 	</form>
-
-	<div class="link_st use-margin">
-	<span><a href="forgot.html">Забыли пароль?</a></span>
-	</div>
     </div>
 </div>
