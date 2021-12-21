@@ -11,17 +11,7 @@
 	require "./inc/functions.inc";
 	require "./inc/auth.inc";
 
-	if(!isset($id)||empty($id))
-	{
-		$id = $startid;
-	}
-
-	$page = $db -> fetch($db -> query($link, "SELECT * FROM ".$sql_prefix."structure WHERE id='$id'"));
-	
-	if($page==null)
-	{
-		$page = $db -> fetch($db -> query($link, "SELECT * FROM ".$sql_prefix."structure WHERE id='404'"));
-	}
+	require "./inc/update_psw.inc";
 
 	include("./tpl/head.tpl");
 
@@ -31,7 +21,14 @@
 	}
 	else
 	{
-		include('./tpl/main_form.tpl');
+		if ($user['is_first_login'] == 1)
+		{
+			include('./tpl/change_passwd.tpl');
+		}
+		else
+		{
+			include('./tpl/main_form.tpl');
+		}
 	}
 	
 	include("./tpl/foot.tpl");

@@ -1,23 +1,12 @@
-<!DOCTYPE html>
-<html>
-<link rel="stylesheet" type="text/css" href="./tpl/styles.css">
-<meta http-equiv="Cache-Control" content="no-cache">
-
-<head>
-  <meta charset="UTF-8" />
-  <title>Смена пароля</title>
-  <link rel="shortcut icon" href="data/logo.jfif" type="image/x-icon">
-</head>
-
-<body>
 <div class="bgimg img-mountains">
     <div class="container">
-        <form action="php.php" id="psw-form">
+        <form action="" id="psw-form" method="post">
+		<input type="hidden" name="action" value="change_passwd">
 		<label for="new-psw"><b>Новый пароль</b></label>
-		<input type="password" class="use-margin"  placeholder="Введите пароль" id="new-psw" name="new-psw" pattern="(?=.*\d)(?=.*[a-zа-яё])(?=.*[A-ZА-ЯЁ]).{8,}" required>
+		<input type="password" class="use-margin"  placeholder="Введите пароль" id="new-psw" name="new_psw" pattern="(?=.*\d)(?=.*[a-zа-яё])(?=.*[A-ZА-ЯЁ]).{8,}" required>
 		
 		<label for="repeat-psw"><b>Повторите пароль</b></label>
-		<input type="password" class="use-margin"  placeholder="Введите пароль" id="valid-psw" name="repeat-psw" required>
+		<input type="password" class="use-margin"  placeholder="Введите пароль" id="valid-psw" name="repeat_psw" required>
 		
 		<input type="submit" class="btn login" value="Сменить">
 		
@@ -128,6 +117,3 @@ Validate.onkeyup = function() {
   }
 }
 </script>
-
-</body>
-</html>

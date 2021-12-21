@@ -18,6 +18,7 @@ if(!isset($_COOKIE['PHPSESSID'])){
 	    $user['id']=$curentuser[1]['id'];
 	    $user['login']=$curentuser[1]['login'];
 	    $user['is_admin']=$curentuser[1]['is_admin'];
+	    $user['is_first_login']=$curentuser[1]['is_first_login'];
 	}
     }
 }else{
@@ -25,6 +26,7 @@ if(!isset($_COOKIE['PHPSESSID'])){
     $user['id']=$curentuser[1]['id'];
     $user['login']=$curentuser[1]['login'];
     $user['is_admin']=$curentuser[1]['is_admin'];
+    $user['is_first_login']=$curentuser[1]['is_first_login'];
     session_start();
 }
 
